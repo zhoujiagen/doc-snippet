@@ -1,9 +1,15 @@
 # OpenJDK compile
 
-- repository: [openjdk/jdk](https://github.com/openjdk/jdk)
-- code fix: [【Java】macOS 下编译 JDK8](https://swsmile.info/2018/11/12/%E3%80%90Java%E3%80%91%E7%BC%96%E8%AF%91%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91-macOS%E4%B8%8B%E7%BC%96%E8%AF%91JDK8/)
-
 ## 菜谱
+
+- code
+
+
+```
+https://github.com/AdoptOpenJDK/openjdk-jdk8u
+```
+
+- code fix: [【Java】macOS 下编译 JDK8](https://swsmile.info/2018/11/12/%E3%80%90Java%E3%80%91%E7%BC%96%E8%AF%91%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91-macOS%E4%B8%8B%E7%BC%96%E8%AF%91JDK8/)
 
 - configure
 
