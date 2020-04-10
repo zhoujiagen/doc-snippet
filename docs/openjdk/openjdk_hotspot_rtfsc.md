@@ -39,4 +39,44 @@
         └── utilities
 ```
 
+## VM Internal Representation of Java Classes and Objects
 
+- oop: Ordinary Object Pointer
+
+![oop Inheritance diagram](../images/openjdk/Inheritance-diagram-for-oopDesc.png)
+
+- Klass
+
+![Klass Inheritance diagram](../images/openjdk/Inheritance-diagram-for-Klass.png)
+
+
+
+|抽象|说明|
+|:----|:----|
+| annotations |  |
+| arrayKlass |  |
+| arrayOop |  |
+| compiledICHolder |  |
+| constMethod |  |
+| constantPool |  |
+| cpCache |  |
+| generateOopMap |  |
+| instanceClassLoaderKlass |  |
+| instanceKlass |  |
+| instanceMirrorKlass |  |
+| instanceOop |  |
+| instanceRefKlass |  |
+| klass |  |
+| klassVtable |  |
+| markOop |  |
+| metadata |  |
+| method |  |
+| methodCounters |  |
+| methodData |  |
+| objArrayKlass |  |
+| objArrayOop |  |
+| oop |  |
+| oopsHierarchy |  |
+| symbol |  |
+| typeArrayKlass |  |
+| typeArrayOop |  |

@@ -1,0 +1,46 @@
+site_name: Doc Snippet
+site_author: 'zhoujiagen@gmail.com'
+copyright: MIT
+repo_name: doc-snippet
+repo_url: https://github.com/zhoujiagen/doc-snippet
+
+nav:
+    - Home: index.md
+    - OpenJDK:
+      - 'JVM Tool Interface': openjdk/jvmti_demo.md
+      - 'Source Build': openjdk/openjdk_compile.md
+      - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
+      - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
+
+
+#theme: readthedocs
+theme:
+  name: material
+extra:
+  search:
+    language: 'en'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+      guess_lang: False
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex # LaTeX math equations
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - footnotes
+
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
