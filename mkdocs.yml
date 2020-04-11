@@ -12,7 +12,6 @@ nav:
       - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
 
-
 #theme: readthedocs
 theme:
   name: material
