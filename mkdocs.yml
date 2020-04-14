@@ -6,6 +6,7 @@ repo_url: https://github.com/zhoujiagen/doc-snippet
 
 nav:
     - Home: index.md
+    - Readings: readings/readings.md
     - OpenJDK:
       - 'JVM Tool Interface': openjdk/jvmti_demo.md
       - 'Source Build': openjdk/openjdk_compile.md
