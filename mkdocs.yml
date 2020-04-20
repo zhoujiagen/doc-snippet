@@ -12,6 +12,7 @@ nav:
       - 'Source Build': openjdk/openjdk_compile.md
       - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
+    - 'Massive Data Analysis': massive-data-analysis/mda.md
 
 #theme: readthedocs
 theme:
