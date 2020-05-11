@@ -13,6 +13,8 @@ nav:
       - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
     - 'Massive Data Analysis': massive-data-analysis/mda.md
+    - 'C++':
+      - 'C++ 11': cplusplus/CXX11-Standard.md
 
 #theme: readthedocs
 theme:
