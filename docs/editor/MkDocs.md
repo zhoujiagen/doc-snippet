@@ -42,11 +42,10 @@ markdown_extensions:
     提示和警告文本: [Admonition](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
 
 !!! info
-    [PyMdown Extensions](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)
+    [PyMdown Extensions](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/): a collection of Markdown extensions that add some great missing features to the standard Markdown library.
 
 !!! info
-    [Arithmatex](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/)
-    Arithmatex is an extension that preserves LaTeX math equations during the Markdown conversion process so that they can be used with libraries like MathJax.
+    [Arithmatex](https://squidfunk.github.io/mkdocs-material/extensions/pymdown/): an extension that preserves LaTeX math equations during the Markdown conversion process so that they can be used with libraries like MathJax.
 
 $$
 E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j

@@ -13,6 +13,9 @@ nav:
       - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
     - 'Massive Data Analysis': massive-data-analysis/mda.md
+    - 'Network':
+      - 'TCP/IP': network/network.md
+      - Netty: network/netty.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md
@@ -33,7 +36,6 @@ nav:
       - 'Posix in Action': clang/posix-in-action.md
       - 'Syscall': clang/syscall.md
       - 'Tool': clang/tool.md
-      - 'Network': clang/network.md
       - 'Linux Architecture': clang/linux-arch.md
     - 'C++':
       - 'C++ Primer': cplusplus/primer.md
@@ -85,7 +87,7 @@ nav:
     - Haskell:
       - 'Tutorial': haskell/tutorial.md
       - 'Tool': haskell/tool.md
-      - 'Library': haskell/lib.md      
+      - 'Library': haskell/lib.md
 
 #theme: readthedocs
 theme:
