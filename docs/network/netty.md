@@ -71,15 +71,7 @@ Netty处理了两类问题:
 - 技术性: 在Java NIO基础上搭建的异步和事件驱动实现, 保证大负载下应用性能和可扩展性
 - 体系结构性: 将应用逻辑与网络层解耦, 简化开发, 最大化可测试性/模块化/代码可重用性
 
-#### channel, eventloop, channel future
-
-Channel/EventLoop/EventLoopGroup的关系:
-
-![Channel/EventLoop/EventLoopGroup的关系](./images/netty/channel-eventloop-eventloopgroup.png)
-
-EventLoop的类层次:
-
-![EventLoop的类层次](./images/netty/eventloop-class-hierarchy.png)
+#### Channel, EventLoop, ChannelFuture
 
 - Channel - sockets
 
@@ -106,7 +98,7 @@ Netty中所有IO操作都是异步的, 需要在将来某一时刻检查异步�
 ChannelFuture中addListener(ChannelFutureListener)方法, 在操作完成时(不管成功还是失败)通知listener. <br>
 ChannelFuture表示的操作最终会被执行, 同一个Channel上的操作保证按被调用循序执行.
 
-#### channel handler, channel pipeline
+#### ChannelHandler, ChannelPipeline
 
 ChannelPipeline和ChannelHandler的关系:
 
@@ -183,31 +175,8 @@ Netty为不同的transport提供了一致的API.
 
 Channel, AttributeMap, ChannelConfig, ChannelPipeline:<br>
 每个Channel都将会被分配一个ChannelPipeline和ChannelConfig. <br>
-ChannelConfig包含Channel的所有配置设置, 且支持热更新.
-
-```
-io.netty.channel.Channel:
-
-alloc(): ByteBufAllocator
-bytesBeforeUnwritable()
-bytesBeforeWritable()
-closeFuture(): ChannelFuture
-config(): ChannelConfig
-eventLoop(): EventLoop
-flush(): Channel
-id(): ChannelId
-isActive()
-isOpen()
-isRegistered()
-isWritable()
-localAddress(): SocketAddress
-metadata(): ChannelMetadata
-parent(): Channel
-pipeline(): ChannelPipeline
-read(): Channel
-remoteAddress(): SocketAddress
-unsafe(): Unsafe
-```
+ChannelConfig包含Channel的所有配置设置, 且支持热更新. <br>
+Netty的Channel实现是线程安全的.
 
 ChannelHandler的典型应用:<br>
 转换数据格式<br>
@@ -217,9 +186,6 @@ Channel注册或注销EventLoop时发布通知<br>
 对用户自定义事件发布通知
 
 可以动态修改ChannelPipeline: 添加/移除ChannelHandler.
-
-Netty的Channel实现是线程安全的.
-
 
 - zero-copy
 
@@ -308,6 +274,10 @@ ChannelHandler由谁调用, 怎么执行???
 
 #### ChannelHandlerContext
 
+ChannelHandlerContext与其它组件的关系图:
+
+![ChannelHandlerContext与其它组件的关系图](./images/netty/ChannelHandlerContext.png)
+
 ChannelHandlerContext在ChannelHandler添加到ChannelPipeline时创建, 一旦关联便不再改变, 可以在ChannelHandler中持有其引用.
 
 维护ChannelHandler与其他ChannelHandler之间的交互.
@@ -322,19 +292,34 @@ ChannelHandlerContext#channel()获取关联Channel实例; ChannelHandlerContext#
 
 ### 7 EventLoop and threading model
 
-线程模型threading model
-描述在OS/编程语言/框架/应用上下文中, 线程管理的关键特性.
 线程池模式: Java 5 Executor API, 但无法避免上下文切换的消耗.
-EventLoop
-io.netty.channel.EventLoop: 执行任务处理连接过程中发生的事件.
-EventLoop设计融合了并发和网络设计: io.netty.util.concurrent(java.util.concurrent), io.netty.channel.
-task scheduling
-implementation
-thread management eventloop-thread-channel allocation
+
+Channel/EventLoop/EventLoopGroup的关系:
+
+![Channel/EventLoop/EventLoopGroup的关系](./images/netty/channel-eventloop-eventloopgroup.png)
+
+EventLoop的类层次:
+
+![EventLoop的类层次](./images/netty/eventloop-class-hierarchy.png)
+
+#### EventLoop
+
+`io.netty.channel.EventLoop`: 执行任务处理连接过程中发生的事件.
+
+EventLoop设计融合了并发和网络设计: `io.netty.util.concurrent` (`java.util.concurrent`), `io.netty.channel`.
+
+
 
 ### 8 Bootstrapping
 
+- Bootstrap
+- ServerBootstrap
+
 ### 9 unit testing
+
+EmbeddedChannel数据流:
+
+![EmbeddedChannel数据流](./images/netty/EmbeddedChannel-data-flow.png)
 
 ## PART 2 codec
 
@@ -411,3 +396,173 @@ WebSocket协议:
 ## PART 3 网络协议
 
 ## PART 4 案例
+
+## Code snippet
+
+### Channel
+
+```
+public interface Channel extends AttributeMap, ChannelOutboundInvoker, Comparable<Channel>:
+  alloc(): ByteBufAllocator
+  bytesBeforeUnwritable()
+  bytesBeforeWritable()
+  closeFuture(): ChannelFuture
+  config(): ChannelConfig
+  eventLoop(): EventLoop
+  flush(): Channel
+  id(): ChannelId
+  isActive()
+  isOpen()
+  isRegistered()
+  isWritable()
+  localAddress(): SocketAddress
+  metadata(): ChannelMetadata
+  parent(): Channel
+  pipeline(): ChannelPipeline
+  read(): Channel
+  remoteAddress(): SocketAddress
+  unsafe(): Unsafe
+```
+
+#### EmbeddedChannel
+
+```
+public class EmbeddedChannel extends AbstractChannel:
+  checkException()
+  close()
+  close(ChannelPromise)
+  config()
+  disconnect()
+  disconnect(ChannelPromise)
+  finish()
+  finishAndReleaseAll()
+  flushInbound()
+  flushOutbound()
+  inboundMessages()
+  isActive()
+  isOpen()
+  lastInboundBuffer()
+  lastOutboundBuffer()
+  metadata()
+  outboundMessages()
+  readInbound()
+  readOutbound()
+  register()
+  releaseInbound()
+  releaseOutbound()
+  runPendingTasks()
+  runScheduledPendingTasks()
+  unsafe()
+  writeInbound(Object...)
+  writeOneInbound(Object)
+  writeOneInbound(Object, ChannelPromise)
+  writeOneOutbound(Object)
+  writeOneOutbound(Object, ChannelPromise)
+  writeOutbound(Object...)
+```
+
+### ChannelHandler
+
+```
+public interface ChannelHandler:
+  Sharable
+  exceptionCaught(ChannelHandlerContext, Throwable)
+  handlerAdded(ChannelHandlerContext)
+  handlerRemoved(ChannelHandlerContext)
+```
+
+#### ChannelInboundHandler
+
+```
+public interface ChannelInboundHandler extends ChannelHandler:
+  channelActive(ChannelHandlerContext)
+  channelInactive(ChannelHandlerContext)
+  channelRead(ChannelHandlerContext, Object)
+  channelReadComplete(ChannelHandlerContext)
+  channelRegistered(ChannelHandlerContext)
+  channelUnregistered(ChannelHandlerContext)
+  channelWritabilityChanged(ChannelHandlerContext)
+  exceptionCaught(ChannelHandlerContext, Throwable)
+  userEventTriggered(ChannelHandlerContext, Object)
+```
+
+### ChannelOutboundHandler
+
+```
+public interface ChannelOutboundHandler extends ChannelHandler:
+  bind(ChannelHandlerContext, SocketAddress, ChannelPromise)
+  close(ChannelHandlerContext, ChannelPromise)
+  connect(ChannelHandlerContext, SocketAddress, SocketAddress, ChannelPromise)
+  deregister(ChannelHandlerContext, ChannelPromise)
+  disconnect(ChannelHandlerContext, ChannelPromise)
+  flush(ChannelHandlerContext)
+  read(ChannelHandlerContext)
+  write(ChannelHandlerContext, Object, ChannelPromise)
+```
+
+### EventLoop
+
+```
+public interface EventLoop extends OrderedEventExecutor, EventLoopGroup
+  parent(): EventLoopGroup
+```
+
+### Bootstrap, ServerBootstrap
+
+```
+public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C extends Channel>
+^-- public class Bootstrap extends AbstractBootstrap<Bootstrap, Channel>
+^-- public class ServerBootstrap extends AbstractBootstrap<ServerBootstrap, ServerChannel>
+
+AbstractBootstrap:
+  attr(AttributeKey<T>, T)
+  bind()
+  bind(int)
+  bind(String, int)
+  bind(InetAddress, int)
+  bind(SocketAddress)
+  channel(Class<? extends C>)
+  channelFactory(ChannelFactory<? extends C>)
+  channelFactory(ChannelFactory<? extends C>)
+  clone()
+  config()
+  group()
+  group(EventLoopGroup)
+  handler(ChannelHandler)
+  localAddress(int)
+  localAddress(String, int)
+  localAddress(InetAddress, int)
+  localAddress(SocketAddress)
+  option(ChannelOption<T>, T)
+  register()
+  toString()
+  validate()
+
+Bootstrap:
+  Bootstrap()
+  clone() - @Override
+  clone(EventLoopGroup)
+  config() - @Override
+  connect()
+  connect(String, int)
+  connect(InetAddress, int)
+  connect(SocketAddress)
+  connect(SocketAddress, SocketAddress)
+  remoteAddress(String, int)
+  remoteAddress(InetAddress, int)
+  remoteAddress(SocketAddress)
+  resolver(AddressResolverGroup<?>)
+  validate() -  @Override
+
+ServerBootstrap:
+  ServerBootstrap()
+  childAttr(AttributeKey<T>, T)
+  childGroup() - @Deprecated
+  childHandler(ChannelHandler)
+  childOption(ChannelOption<T>, T)
+  clone() -  @Override
+  config() - @Override
+  group(EventLoopGroup) -  @Override
+  group(EventLoopGroup, EventLoopGroup)
+  validate() - @Override
+```
