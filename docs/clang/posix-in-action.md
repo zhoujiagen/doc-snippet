@@ -472,17 +472,17 @@ tcgetpgrp(), tcsetpgrp(), tcgetsid()
 void ( *signal(int signo, void (*func)(int)) )(int);
 ```
 
-signal()的语义与实现有关, 最好试用sigaction()替代signal().
+signal()的语义与实现有关, 最好使用sigaction()替代signal().
 
-
-信号集(signal set)
+信号集(signal set):
 
 - 数据类型: sigset_t
 - 函数: sigemptyset(), sigfillset(), sigaddset(), sigdelset(), sigismember()
 
-进程的信号屏蔽字: 当前阻塞不能递送给该进程的信号集; sigprocmask()
+进程的信号屏蔽字:
 
-进程中阻塞不能投递的信号集: sigpending()
+- 当前阻塞不能递送给该进程的信号集; sigprocmask()
+- 进程中阻塞不能投递的信号集: sigpending()
 
 sigaction()
 
@@ -506,9 +506,7 @@ sigqueue()
 
 POSIX线程/pthread
 
-```
-<pthread.h>
-```
+`<pthread.h>`
 
 - 线程标识: pthread_equal(), pthread_self()
 - 线程创建: pthread_create()
