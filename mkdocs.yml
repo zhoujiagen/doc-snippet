@@ -13,6 +13,7 @@ nav:
       - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
       - 'Concurrency': openjdk/concurrency.md
+      - 'GC': openjdk/gc.md
     - 'Massive Data Analysis': massive-data-analysis/mda.md
     - 'Network':
       - 'TCP/IP': network/network.md
@@ -38,6 +39,7 @@ nav:
       - 'Syscall': clang/syscall.md
       - 'Tool': clang/tool.md
       - 'Linux Architecture': clang/linux-arch.md
+      - 'The Linux Programming Interface': clang/tlpi.md
     - 'C++':
       - 'C++ Primer': cplusplus/primer.md
       - 'Tool': cplusplus/tool.md
@@ -89,6 +91,12 @@ nav:
       - 'Tutorial': haskell/tutorial.md
       - 'Tool': haskell/tool.md
       - 'Library': haskell/lib.md
+    - Parser:
+      - 'SPARQL': parser/sparql.md
+    - Profiling:
+      - 'perf': profiling/perf.md
+      - 'Flame Graph': profiling/flame-graph.md
+      - 'BPF': profiling/bpf-book.md
 
 #theme: readthedocs
 theme:
