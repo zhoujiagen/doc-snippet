@@ -18,6 +18,7 @@ nav:
     - 'Network':
       - 'TCP/IP': network/network.md
       - Netty: network/netty.md
+      - 'NS2': network/ns2.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md
