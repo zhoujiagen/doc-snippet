@@ -2,9 +2,9 @@
 
 ## 资源
 
--  [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query)
--  [SPARQL 1.1 Update](https://www.w3.org/TR/sparql11-update/)
-
+- [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query)
+- [SPARQL 1.1 Update](https://www.w3.org/TR/sparql11-update/)
+- Bob DuCharme. Learning SPARQL, Second Edition. O’Reilly Media: 2013.
 
 ## 定义
 

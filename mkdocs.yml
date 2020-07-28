@@ -92,11 +92,21 @@ nav:
       - 'Tool': haskell/tool.md
       - 'Library': haskell/lib.md
     - Parser:
+      - 'Modeling in RDFS and OWL': parser/rdfs_owl.md
       - 'SPARQL': parser/sparql.md
+    - NLP:
+      - 'WordNet': nlp/wordnet.md
+      - 'VerbNet': nlp/verbnet.md
+      - 'NLTK': nlp/nltk.md
     - Profiling:
       - 'perf': profiling/perf.md
       - 'Flame Graph': profiling/flame-graph.md
-      - 'BPF': profiling/bpf-book.md
+      - 'BPF':
+        - 'Book': profiling/bpf-book.md
+        - 'PART 1: 技术': profiling/bpf-book-part1.md
+        - 'PART 2: 使用BPF工具': profiling/bpf-book-part2.md
+        - 'PART 3: 高级主题': profiling/bpf-book-part3.md
+        - 'PART 4: 附录': profiling/bpf-book-part4.md
 
 #theme: readthedocs
 theme:
