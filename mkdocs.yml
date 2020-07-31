@@ -102,6 +102,7 @@ nav:
       - 'perf': profiling/perf.md
       - 'Flame Graph': profiling/flame-graph.md
       - 'BPF':
+        - 'Notes of BPF': profiling/bpf-notes.md
         - 'Book': profiling/bpf-book.md
         - 'PART 1: 技术': profiling/bpf-book-part1.md
         - 'PART 2: 使用BPF工具': profiling/bpf-book-part2.md
