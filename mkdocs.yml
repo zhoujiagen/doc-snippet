@@ -99,15 +99,17 @@ nav:
       - 'VerbNet': nlp/verbnet.md
       - 'NLTK': nlp/nltk.md
     - Profiling:
+      - 'Performance Analysis': profiling/perf_analysis.md
       - 'perf': profiling/perf.md
       - 'Flame Graph': profiling/flame-graph.md
       - 'BPF':
-        - 'Notes of BPF': profiling/bpf-notes.md
-        - 'Book': profiling/bpf-book.md
-        - 'PART 1: 技术': profiling/bpf-book-part1.md
-        - 'PART 2: 使用BPF工具': profiling/bpf-book-part2.md
-        - 'PART 3: 高级主题': profiling/bpf-book-part3.md
-        - 'PART 4: 附录': profiling/bpf-book-part4.md
+        - 'Notes of BPF': profiling/bpf/bpf-notes.md
+        - 'Book':
+          - 'Index': profiling/bpf/bpf-book.md
+          - 'PART 1: 技术': profiling/bpf/bpf-book-part1.md
+          - 'PART 2: 使用BPF工具': profiling/bpf/bpf-book-part2.md
+          - 'PART 3: 高级主题': profiling/bpf/bpf-book-part3.md
+          - 'PART 4: 附录': profiling/bpf/bpf-book-part4.md
 
 #theme: readthedocs
 theme:

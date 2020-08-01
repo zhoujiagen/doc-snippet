@@ -94,7 +94,7 @@ It is designed to be lightweight and require minimal dependencies, which makes i
 |VFS|filelife||
 |VFS|fileslower||
 |VFS|vfscount||
-|VFS|vfsstat||
+|VFS|vfsstat| VFS的状态|
 |VFS|filetype||
 |VFS|fsrwstat||
 |VFS|vfssize||
