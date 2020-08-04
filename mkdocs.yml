@@ -100,10 +100,14 @@ nav:
       - 'NLTK': nlp/nltk.md
     - Profiling:
       - 'Performance Analysis': profiling/perf_analysis.md
+      - 'Linux Tracing Technologies': profiling/linux-tracing.md
       - 'perf': profiling/perf.md
+      - 'strace': profiling/strace.md
       - 'Flame Graph': profiling/flame-graph.md
       - 'BPF':
         - 'Notes of BPF': profiling/bpf/bpf-notes.md
+        - 'BPF Tools': profiling/bpf/bpf-tools.md
+        - 'Tracepoints': profiling/bpf/tracepoints.md
         - 'Book':
           - 'Index': profiling/bpf/bpf-book.md
           - 'PART 1: 技术': profiling/bpf/bpf-book-part1.md
