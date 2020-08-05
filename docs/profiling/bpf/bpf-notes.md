@@ -71,7 +71,45 @@ It provides a C programming environment for writing kernel BPF code and other la
 
 #### Features
 
+##### Event Sources
 
+- dynamic instrumentation, kernel-level: kprobe
+- dynamic instrumentation, user-level: uprobe
+- static tracing, kernel-level: tracepoint, software
+- static tracing, user-level: usdt, via libbcc
+- timed sampling events: profile
+- interval events: interval
+- PMC events: hardware
+- synthetic events: BEGIN, END
+
+##### Actions
+
+- filtering: predicates
+- per-event output: `printf()`
+- base variables: `global`, `$local`, `per[tid]`
+- built-in variables: `pid`, `tid`, `comm`, `nsecs`, ...
+- associative arrays: `key[value]`
+- frequency counting: `count()`, `++`
+- statistics: `min()`, `max()`, `sum()`, `avg()`, `stats()`
+- histogram: `hist()`, `lhist()`
+- timestamps and time deltas: `nsecs`, hash storage
+- stack trace, kerbel: kstack
+- stack trace, user: ustack
+- symbol resolution, kernel-level: `ksym()`, `kaddr()`
+- symbol resolution, user-level: `usym()`, `uaddr()`
+- C struct navifation: `->`
+- array access: `[]`
+- shell commands: `system()`
+- printing files: `cat()`
+- positional parameter: `$1`, `$2`, ...
+
+##### General Features
+
+- low-overhead instrumentation: BPF JIT, maps
+- production safe: BPF verifier
+- tools: under `/tools`
+- tutorial: `/docs/tutorial_one_liners_chinese.md`
+- reference guide: `/docs/reference_guide.md`
 
 ### ply
 
