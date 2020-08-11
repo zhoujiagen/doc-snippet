@@ -98,22 +98,6 @@ nav:
       - 'WordNet': nlp/wordnet.md
       - 'VerbNet': nlp/verbnet.md
       - 'NLTK': nlp/nltk.md
-    - Profiling:
-      - 'Performance Analysis': profiling/perf_analysis.md
-      - 'Linux Tracing Technologies': profiling/linux-tracing.md
-      - 'perf': profiling/perf.md
-      - 'strace': profiling/strace.md
-      - 'Flame Graph': profiling/flame-graph.md
-      - 'BPF':
-        - 'Notes of BPF': profiling/bpf/bpf-notes.md
-        - 'BPF Tools': profiling/bpf/bpf-tools.md
-        - 'Tracepoints': profiling/bpf/tracepoints.md
-        - 'Book':
-          - 'Index': profiling/bpf/bpf-book.md
-          - 'PART 1: 技术': profiling/bpf/bpf-book-part1.md
-          - 'PART 2: 使用BPF工具': profiling/bpf/bpf-book-part2.md
-          - 'PART 3: 高级主题': profiling/bpf/bpf-book-part3.md
-          - 'PART 4: 附录': profiling/bpf/bpf-book-part4.md
 
 #theme: readthedocs
 theme:
