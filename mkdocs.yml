@@ -91,6 +91,9 @@ nav:
       - 'Tutorial': haskell/tutorial.md
       - 'Tool': haskell/tool.md
       - 'Library': haskell/lib.md
+    - Rust:
+      - 'Notes': rust/notes.md
+      - 'Tools': rust/tool.md
     - Parser:
       - 'Modeling in RDFS and OWL': parser/rdfs_owl.md
       - 'SPARQL': parser/sparql.md
