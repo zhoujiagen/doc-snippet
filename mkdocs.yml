@@ -76,10 +76,6 @@ nav:
     - Parser:
       - 'Modeling in RDFS and OWL': parser/rdfs_owl.md
       - 'SPARQL': parser/sparql.md
-    - NLP:
-      - 'WordNet': nlp/wordnet.md
-      - 'VerbNet': nlp/verbnet.md
-      - 'NLTK': nlp/nltk.md
 
 #theme: readthedocs
 theme:
