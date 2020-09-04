@@ -76,6 +76,7 @@ nav:
     - Parser:
       - 'Modeling in RDFS and OWL': parser/rdfs_owl.md
       - 'SPARQL': parser/sparql.md
+      - 'JavaCC': parser/javacc.md
 
 #theme: readthedocs
 theme:
