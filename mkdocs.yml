@@ -6,7 +6,7 @@ repo_url: https://github.com/zhoujiagen/doc-snippet
 
 nav:
     - Home: index.md
-    - Readings: readings/readings.md
+    - Readings: readings.md
     - OpenJDK:
       - 'JVM Tool Interface': openjdk/jvmti_demo.md
       - 'Source Build': openjdk/openjdk_compile.md
@@ -14,7 +14,9 @@ nav:
       - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
       - 'Concurrency': openjdk/concurrency.md
       - 'GC': openjdk/gc.md
-    - 'Massive Data Analysis': massive-data-analysis/mda.md
+      - 'Spring': openjdk/spring.md
+    - 'DBMS':
+      - 'MySQL Explain': dbms/mysql-explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md
@@ -26,10 +28,6 @@ nav:
     - Build:
       - Maven: build-tools/maven.md
       - Gradle: build-tools/gradle.md
-    - Golang:
-      - 'Tutorial': golang/tutorial.md
-      - 'Tools': golang/tool.md
-      - 'Specification': golang/tgpls.md
     - Common Lisp:
       - 'Tools': common-lisp/tool.md
       - 'Terminology': common-lisp/terminology.md
