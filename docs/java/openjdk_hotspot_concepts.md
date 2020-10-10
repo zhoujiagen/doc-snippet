@@ -1,5 +1,6 @@
 # HotSpot
 
+- [Java SE Core Technologies](https://www.oracle.com/java/technologies/javase/javase-core-technologies-apis.html)
 - 术语: [HotSpot Glossary of Terms](http://openjdk.java.net/groups/hotspot/docs/HotSpotGlossary.html)
 - 存储管理: [Storage Management](http://openjdk.java.net/groups/hotspot/docs/StorageManagement.html)
 - Johannes Kepler University (JKU): [Compiler and JVM Research at JKU](http://ssw.jku.at/Research/Projects/JVM/)

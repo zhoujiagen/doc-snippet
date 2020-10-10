@@ -6,6 +6,10 @@
 
 #### JVM
 
+
+- 深入理解Java虚拟机: JVM高级特性与最佳实践
+- HotSpot实战
+
 #### Spring Framework
 
 ## Databases
@@ -23,5 +27,7 @@
 ### Apache HBase
 
 ### Apache Jena TDB
+
+
 
 ### Redis

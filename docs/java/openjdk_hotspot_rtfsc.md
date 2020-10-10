@@ -7,6 +7,12 @@
 - [OpenJDK The HotSpot Group](http://openjdk.java.net/groups/hotspot/): The HotSpot group is comprised of developers involved in the design, implementation, and maintanence of the HotSpot virtual machine.
 
 
+## 编译
+
+code: `https://github.com/AdoptOpenJDK/openjdk-jdk8u`
+
+不同的版本在Mac下有不同的编译错误信息, 可以参照时事修正文档.
+
 ## 项目结构
 
 - [jdk8u252-b08](https://github.com/AdoptOpenJDK/openjdk-jdk8u)

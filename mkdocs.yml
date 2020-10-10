@@ -7,16 +7,22 @@ repo_url: https://github.com/zhoujiagen/doc-snippet
 nav:
     - Home: index.md
     - Readings: readings.md
-    - OpenJDK:
-      - 'JVM Tool Interface': openjdk/jvmti_demo.md
-      - 'Source Build': openjdk/openjdk_compile.md
-      - 'HotSpot Concepts': openjdk/openjdk_hotspot_concepts.md
-      - 'HotSpot RTFSC': openjdk/openjdk_hotspot_rtfsc.md
-      - 'Concurrency': openjdk/concurrency.md
-      - 'GC': openjdk/gc.md
-      - 'Spring': openjdk/spring.md
+    - Java:
+      - 'JVM Tool Interface': java/jvmti_demo.md
+      - 'HotSpot Concepts': java/openjdk_hotspot_concepts.md
+      - 'HotSpot RTFSC': java/openjdk_hotspot_rtfsc.md
+      - 'Concurrency': java/concurrency.md
+      - 'GC': java/gc.md
+      - 'Spring': java/spring.md
     - 'DBMS':
-      - 'MySQL Explain': dbms/mysql-explain.md
+      - Parser:
+        - 'Modeling in RDFS and OWL': dbms/parser/rdfs_owl.md
+        - 'SPARQL': dbms/parser/sparql.md
+        - 'JavaCC': dbms/parser/javacc.md
+      - MySQL:
+        - RTFSC:
+          'MySQL Source Build': dbms/mysql/mysql-compile.md
+        - 'MySQL Explain': dbms/mysql/mysql-explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md
@@ -71,10 +77,6 @@ nav:
       - 'Tutorial': haskell/tutorial.md
       - 'Tool': haskell/tool.md
       - 'Library': haskell/lib.md
-    - Parser:
-      - 'Modeling in RDFS and OWL': parser/rdfs_owl.md
-      - 'SPARQL': parser/sparql.md
-      - 'JavaCC': parser/javacc.md
 
 #theme: readthedocs
 theme:
