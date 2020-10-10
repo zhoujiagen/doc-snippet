@@ -20,9 +20,8 @@ nav:
         - 'SPARQL': dbms/parser/sparql.md
         - 'JavaCC': dbms/parser/javacc.md
       - MySQL:
-        - RTFSC:
-          'MySQL Source Build': dbms/mysql/mysql-compile.md
-        - 'MySQL Explain': dbms/mysql/mysql-explain.md
+        - 'MySQL Source Build': dbms/mysql/mysql_compile.md
+        - 'MySQL Explain': dbms/mysql/mysql_explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md
