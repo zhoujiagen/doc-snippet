@@ -115,7 +115,7 @@ Version: 8.0.19.
 ├─sql                             处理SQL命令的程序, MySQL的核心.
 │  ├─auth
 │  ├─conn_handler
-│  ├─dd
+│  ├─dd                           数据字典
 │  ├─examples
 │  ├─gis
 │  ├─histograms
