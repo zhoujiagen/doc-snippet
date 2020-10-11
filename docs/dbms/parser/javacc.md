@@ -1,10 +1,5 @@
-# Notes of JavaCC
+# Notes of **Generating Parsers with JavaCC**
 
-## 资源
-
-- Tom Copeland. Generating Parsers with JavaCC. Centennial Books, 2009.
-- [javacc](https://github.com/javacc/javacc): JavaCC - a parser generator for building parsers from grammars. It can generate code in Java, C++ and C#.
-- [ph-javacc-maven-plugin](https://github.com/phax/ph-javacc-maven-plugin): An updated version of the javacc-maven-plugin using ParserGeneratorCC
 
 ### Table of Contents for the Book
 

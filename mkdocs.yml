@@ -7,6 +7,7 @@ repo_url: https://github.com/zhoujiagen/doc-snippet
 nav:
     - Home: index.md
     - Readings: readings.md
+    - '参考文献': references.md
     - Java:
       - 'JVM Tool Interface': java/jvmti_demo.md
       - 'HotSpot Concepts': java/openjdk_hotspot_concepts.md
@@ -20,8 +21,12 @@ nav:
         - 'SPARQL': dbms/parser/sparql.md
         - 'JavaCC': dbms/parser/javacc.md
       - MySQL:
-        - 'MySQL Source Build': dbms/mysql/mysql_compile.md
-        - 'MySQL Explain': dbms/mysql/mysql_explain.md
+        - 'Source Build': dbms/mysql/mysql_compile.md
+        - 'mysqld': dbms/mysql/mysql_mysqld.md
+        - 'Data Models': dbms/mysql/mysql_data_model.md
+        - 'Routines': dbms/mysql/mysql_routines.md
+        - 'InnoDB': dbms/mysql/mysql_innodb.md
+        - 'Explain': dbms/mysql/mysql_explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - MkDocs: editor/MkDocs.md

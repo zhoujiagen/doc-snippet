@@ -1,12 +1,5 @@
 # OpenJDK HotSpot RTFSC
 
-## 背景资源
-
-- [Blog of Dave Dice](https://blogs.oracle.com/dave/): An Oracle blog about Transactional locks
-- [Oracle Lab](https://labs.oracle.com/pls/apex/f?p=LABS)
-- [OpenJDK The HotSpot Group](http://openjdk.java.net/groups/hotspot/): The HotSpot group is comprised of developers involved in the design, implementation, and maintanence of the HotSpot virtual machine.
-
-
 ## 编译
 
 code: `https://github.com/AdoptOpenJDK/openjdk-jdk8u`

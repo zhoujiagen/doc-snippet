@@ -1,11 +1,5 @@
 # Modleing in RDFS and OWL
 
-## 资源
-
-- Dean Allemang, James Hendler. Semantic Web for the Working Ontologist, Second Edition. Elsevier: 2011.
-
-
-
 ## RDF
 
 

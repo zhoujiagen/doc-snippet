@@ -1,8 +1,5 @@
 # MySQL Explain
 
-
-- [MySQL 5.7 Explain Output Format](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html)
-
 ## 输出列
 
 |输出列|名称|含义|

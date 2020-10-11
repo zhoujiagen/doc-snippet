@@ -1,12 +1,9 @@
 # Concurrency
 
-## concurrent包
 
-- Java 7: https://docs.oracle.com/javase/7/docs/api/
+## Java 7 `java.util.concurrent`
 
-### java.util.concurrent
-
-#### 接口
+### 接口
 
 |<p style="width: 260px;">接口</p>|说明|
 |:---|:---|
@@ -31,7 +28,7 @@
 | `TransferQueue<E>`	| A BlockingQueue in which producers may wait for consumers to receive elements. <br>一个`BlockingQueue`, 生产者可以等待消费者接收元素.|
 
 
-#### 类
+### 类
 
 |<p style="width: 260px;">类</p>|说明|
 |:---|:---|
@@ -71,13 +68,13 @@
 | `ThreadPoolExecutor.`<br>`DiscardOldestPolicy`	| A handler for rejected tasks that discards the oldest unhandled request and then retries execute, unless the executor is shut down, in which case the task is discarded. <br>被拒绝任务的处理器, 丢弃最旧的未处理请求, 然后重试执行, 除非执行者已关闭, 这时该任务被丢弃.|
 | `ThreadPoolExecutor.`<br>`DiscardPolicy`	| A handler for rejected tasks that silently discards the rejected task. <br>被拒绝任务的处理器, 直接丢弃被拒绝的任务.|
 
-#### 枚举
+### 枚举
 
 |<p style="width: 260px;">枚举</p>|说明|
 |:---|:---|
 | `TimeUnit`	| A TimeUnit represents time durations at a given unit of granularity and provides utility methods to convert across units, and to perform timing and delay operations in these units. <br>不同粒度的时间长度的枚举工具类.|
 
-#### 异常
+### 异常
 
 |<p style="width: 260px;">异常</p>|说明|
 |:---|:---|
@@ -88,7 +85,7 @@
 | `TimeoutException`	| Exception thrown when a blocking operation times out. <br>当阻塞操作超时时, 抛出.|
 
 
-#### java.util.concurrent.atomic
+### java.util.concurrent.atomic
 
 |<p style="width: 260px;">类</p>|说明|
 |:---|:---|
@@ -106,10 +103,10 @@
 | `AtomicStampedReference<V>`	| An AtomicStampedReference maintains an object reference along with an integer "stamp", that can be updated atomically. <br>用一个整数标志维护一个对象引用, 这个引用可被原子的更新.|
 
 
-#### java.util.concurrent.locks
+### java.util.concurrent.locks
 
 
-##### 接口
+#### 接口
 
 |<p style="width: 260px;">接口</p>|说明|
 |:---|:---|
@@ -117,7 +114,7 @@
 | `Lock`	| Lock implementations provide more extensive locking operations than can be obtained using synchronized methods and statements. <br>提供了使用同步方法和语句外更为基础的锁操作.|
 | `ReadWriteLock`	| A ReadWriteLock maintains a pair of associated locks, one for read-only operations and one for writing. <br>维护了一个相关的锁对, 一个用于只读操作, 一个用于写操作.|
 
-##### 类
+#### 类
 
 |<p style="width: 260px;">类</p>|说明|
 |:---|:---|

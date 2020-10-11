@@ -1,9 +1,4 @@
-# A Simple JVM Demo
-
-## 资源
-
-- JVMTI的文档: [Java 8 JVMTM Tool Interface](https://docs.oracle.com/javase/8/docs/platform/jvmti/jvmti.html)
-- 示例来源: [Building a Super Simple JVMTI Agent](http://saurabhbadhwar.xyz/blog/2019/02/18/building-super-simple-jvmti-agent/)
+# A Simple JVMTI Demo
 
 ## 菜谱
 
