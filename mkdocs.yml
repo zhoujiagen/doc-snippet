@@ -30,6 +30,7 @@ nav:
         - 'Explain': dbms/mysql/mysql_explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
+      - 'IntelliJ IDEA': editor/idea.md
       - MkDocs: editor/MkDocs.md
       - Atom: editor/atom.md
       - Emacs: editor/emacs.md
