@@ -37,9 +37,10 @@ nav:
       - GNU: editor/gnu.md
       - Jupyter: editor/jupyter.md
       - Latex: editor/latex-quick-ref.md
-    - Build:
-      - Maven: build-tools/maven.md
-      - Gradle: build-tools/gradle.md
+    - Tools:
+      - Git: tools/git.md
+      - Maven: tools/maven.md
+      - Gradle: tools/gradle.md
     - Common Lisp:
       - 'Tools': common-lisp/tool.md
       - 'Terminology': common-lisp/terminology.md
