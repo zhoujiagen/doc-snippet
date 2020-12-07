@@ -16,6 +16,7 @@ nav:
       - 'GC': java/gc.md
       - 'Spring': java/spring.md
     - 'DBMS':
+      - 'Refernces of Database Internals': dbms/ref-of-db-internals.md
       - Parser:
         - 'Modeling in RDFS and OWL': dbms/parser/rdfs_owl.md
         - 'SPARQL': dbms/parser/sparql.md
