@@ -4,6 +4,23 @@
 
 见**MySQL 8.0 Reference Manual** 2.10 Postinstallation Setup and Testing
 
+## 使用**DEBUG**包
+
+见**MySQL 8.0 Reference Manual 5.9.4 The DBUG Package**.
+
+
+对`mysqld`可以通过`debug`系统变量调整:
+
+``` shell
+mysql> SET GLOBAL debug = 'debug_options';
+mysql> SET SESSION debug = 'debug_options';
+
+# 例:
+# SET SESSION debug = 'd:t:i:o,/tmp/mysqld_debug.trace';
+# SET SESSION debug = '';
+```
+
+
 ## main
 
 `sql/main.cc`:

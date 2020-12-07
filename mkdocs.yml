@@ -21,13 +21,18 @@ nav:
         - 'SPARQL': dbms/parser/sparql.md
         - 'JavaCC': dbms/parser/javacc.md
       - MySQL:
-        - 'Notes of Manual': dbms/mysql/note_of_manual.md
-        - 'Source Build': dbms/mysql/mysql_compile.md
-        - 'mysqld': dbms/mysql/mysql_mysqld.md
-        - 'Data Models': dbms/mysql/mysql_data_model.md
-        - 'Routines': dbms/mysql/mysql_routines.md
-        - 'InnoDB': dbms/mysql/mysql_innodb.md
-        - 'Explain': dbms/mysql/mysql_explain.md
+        - '5.7':
+          - 'INSERT': dbms/mysql/5.7/sql/insert.md
+          - 'SELECT': dbms/mysql/5.7/sql/select.md
+          - 'INSERT INTO SELECT': dbms/mysql/5.7/sql/insert_into_select.md
+        - '8.0':
+          - 'Notes of Manual': dbms/mysql/8.0/note_of_manual.md
+          - 'Source Build': dbms/mysql/8.0/mysql_compile.md
+          - 'mysqld': dbms/mysql/8.0/mysql_mysqld.md
+          - 'Data Models': dbms/mysql/8.0/mysql_data_model.md
+          - 'Routines': dbms/mysql/8.0/mysql_routines.md
+          - 'InnoDB': dbms/mysql/8.0/mysql_innodb.md
+          - 'Explain': dbms/mysql/8.0/mysql_explain.md
     - Editor:
       - Eclipse: editor/eclipse.md
       - 'IntelliJ IDEA': editor/idea.md
