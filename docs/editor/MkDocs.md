@@ -62,3 +62,26 @@ $$
 脚注: [^1]
 
 [^1]: https://squidfunk.github.io/mkdocs-material/extensions/footnotes/
+
+
+[引入mermaid diagrams](https://github.com/squidfunk/mkdocs-material/issues/693):
+
+```
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+```
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```

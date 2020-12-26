@@ -119,6 +119,12 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - footnotes
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
